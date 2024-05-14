@@ -10,6 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @SpringBootApplication
 @RestController
@@ -54,7 +55,7 @@ public class DemoApplication {
 
 
     	@GetMapping("/image")
-   	 @ResponseBody
+   	@ResponseBody
     	public String getImage() {
         // Aqui você pode retornar o caminho para a imagem ou o conteúdo da imagem
         // por meio de um objeto de byte ou base64.
