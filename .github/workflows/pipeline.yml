@@ -157,6 +157,9 @@ jobs:
     needs: build
     steps:
       - name: Deploy 
+        shell: bash
+        run: |
+          echo "Deploy PROD" 
   
   deploy-azure:
     needs: build  
