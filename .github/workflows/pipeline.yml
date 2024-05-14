@@ -80,7 +80,7 @@ jobs:
         run: mvn --batch-mode deploy
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-   deploy-STG:
+  deploy-STG:
      runs-on: ubuntu-latest
      needs: publish
      environment:
