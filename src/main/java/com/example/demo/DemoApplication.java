@@ -51,6 +51,16 @@ public class DemoApplication {
 	String turma(){
 		return "Zumbi";
 	}
-	
+
+
+    	@GetMapping("/image")
+   	 @ResponseBody
+    	public String getImage() {
+        // Aqui você pode retornar o caminho para a imagem ou o conteúdo da imagem
+        // por meio de um objeto de byte ou base64.
+        // Por exemplo:
+        // return "<img src='/caminho/para/sua/imagem.jpg'>";
+        return "<img src='https://learn.microsoft.com/pt-br/shows/devops-lab/media/devopslab-titlecard.png'>";
+    }
 
 }	
