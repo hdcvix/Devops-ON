@@ -182,12 +182,12 @@ jobs:
       - name: Deploy to EB
         uses: einaregilsson/beanstalk-deploy@v21
         with:
-          aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws_access_key: ${{ secrets.AWS_ACCOUNT_ID }}
+          aws_secret_key: ${{ secrets.AWS_ACCOUNT_KEY }}
           wait_for_environment_recovery: 90
           use_existing_version_if_available: false
-          application_name: DevopsFiap-0n
-          environment_name: DevopsFiap-0n-env-1
+          application_name: DevopsFiap-hdc
+          environment_name: Devopsfiap-hdc-env
           version_label: ${{github.SHA}}
           region: us-east-1
           deployment_package: ./target/demo-0.0.2.7-SNAPSHOT.jar
